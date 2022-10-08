@@ -1,0 +1,32 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: 🪶 Java CI with Maven
+
+on: [push]
+
+
+
+jobs:
+
+  conventional-commits-versionning:
+    needs: [build]
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
+    name: 📦 Bump version and create release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+
+      - name: Semantic Release
+        if: github.ref == 'refs/heads/main'
+        id: release
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          extra_plugins: |
+            @semantic-release-helm
+        env:
+          GITHUB_TOKEN: ${{ secrets.OPT_CI_TOKEN }} # un token particulier pour que les workflows sur release soient déclenchés

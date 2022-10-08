@@ -1,0 +1,12 @@
+{
+   "branches": "main",
+   "debug": "true",
+   "plugins": [
+    [
+      "@semantic-release-helm",
+      {
+        chartPath: '.'
+      }
+    ]
+   ]
+}
