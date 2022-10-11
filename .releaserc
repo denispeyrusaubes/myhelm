@@ -1,28 +1,18 @@
 {
-   "branches": "main",
-   "debug": "true",
-   "plugins": [
+  "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
+    "@semantic-release/github",
     [
-      
-      {
-        "changelogFile": "docs/CHANGELOG.md"
-      }
-    ],
-    [
-      "@semantic-release-helm",
-      {
-        "chartPath": "."
-      }
-    ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": ["docs/CHANGELOG.md"]
-      }
-    ]
+        "@brpaz/semantic-release-helm",
+        {
+          "chartPath": ".",
+          "chartRepository": {
+            "branch": "gh-pages",
+            "url": "https://brpaz.github.io/semantic-release-helm-demo",
+            "repository": "brpaz/semantic-release-helm-demo"
+          }
+        }
+      ]
   ]
-   
 }
