@@ -25,6 +25,6 @@ jobs:
             semantic-release/release-notes-generator
             semantic-release/changelog
             semantic-release/git
-#            semantic-release-helm
+            semantic-release-helm
         env:
           GITHUB_TOKEN: ${{ secrets.OPT_CI_TOKEN }} # un token particulier pour que les workflows sur release soient déclenchés
