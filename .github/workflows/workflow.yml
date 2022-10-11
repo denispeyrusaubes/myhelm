@@ -44,7 +44,7 @@ jobs:
 #        run: cd test && go mod download
 
   release:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs: [test]
     runs-on: ubuntu-latest
     steps:
