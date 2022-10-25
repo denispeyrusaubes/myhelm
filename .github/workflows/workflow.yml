@@ -1,6 +1,6 @@
 # As the main branch is protected, 
 # this event can only be triggered after a pull request 
-name: Deliver release, generate doc
+name: Deliver release
 on: 
   push:
     branches:
@@ -20,6 +20,6 @@ jobs:
           extra_plugins: |
             semantic-release-helm3 
         env:
-          GITHUB_TOKEN: ${{ secrets.OPT_CI_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RTG_CI_TOKEN }}
           HELM_REPO_USERNAME: ${{ secrets.HELM_CHARTMUSEUM_AUTH_USERNAME }}
           HELM_REPO_PASSWORD: ${{ secrets.HELM_CHARTMUSEUM_AUTH_PASSWORD }}
