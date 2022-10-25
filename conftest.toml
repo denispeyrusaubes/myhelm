@@ -1,3 +1,0 @@
-[[policies]]
-repository = "instrumenta.azurecr.io/kubernetes"
-tag = "latest"
