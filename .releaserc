@@ -8,7 +8,7 @@
     [
         "semantic-release-helm3",
         {
-          "chartPath": "./charts/domainnc",
+          "chartPath": ".",
           "isChartMuseum": true,
           "registry": "https://helm.opt.nc"
         }
