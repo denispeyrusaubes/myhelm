@@ -21,5 +21,5 @@ jobs:
             semantic-release-helm3 
         env:
           GITHUB_TOKEN: ${{ secrets.RTG_CI_TOKEN }}
-          HELM_REPO_USERNAME: ${{ secrets.HELM_CHARTMUSEUM_AUTH_USERNAME }}
-          HELM_REPO_PASSWORD: ${{ secrets.HELM_CHARTMUSEUM_AUTH_PASSWORD }}
+          HELM_REPO_USERNAME: ""
+          HELM_REPO_PASSWORD: ""

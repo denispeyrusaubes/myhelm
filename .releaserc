@@ -10,7 +10,7 @@
         {
           "chartPath": ".",
           "isChartMuseum": true,
-          "registry": "https://helm.opt.nc"
+          "registry": "http://sandbox-chartmuseum.retengr.io:9999"
         }
       ],
       "@semantic-release/github"
