@@ -21,8 +21,7 @@ jobs:
           extra_plugins: |
             semantic-release-helm3 
         env:
-          GITHUB_TOKEN: ${{ secrets.RTG_CI_TOKEN }}
+          GITHUB_TOKEN: "blah"
           HELM_REPO_USERNAME: admin
           HELM_REPO_PASSWORD: Retengr_31
-# 
 
