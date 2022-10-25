@@ -1,4 +1,4 @@
-name: Deliver release
+name: Debug
 on: [push]
 
 
