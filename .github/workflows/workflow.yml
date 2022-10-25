@@ -25,3 +25,4 @@ jobs:
           HELM_REPO_USERNAME: admin
           HELM_REPO_PASSWORD: Retengr_31
 
+#docker run --rm -d -it   -p 9999:8080   -e DEBUG=1   -e STORAGE=local   -e STORAGE_LOCAL_ROOTDIR=/charts -e BASIC_AUTH_USER=admin -e BASIC_AUTH_PASS=Retengr_31 -e AUTH_ANONYMOUS_GET=true -v $(pwd)/charts:/charts   ghcr.io/helm/chartmuseum:v0.14.0 --basic-auth-user=admin --basic-auth-pass=Retengr_31
