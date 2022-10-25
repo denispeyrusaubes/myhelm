@@ -13,7 +13,7 @@
           "registry": "http://sandbox-chartmuseum.retengr.io:9999"
         }
       ],
-      "@semantic-release/changelog@3.0.0",
-      "@semantic-release/github"
+      "semantic-release/changelog@3.0.0",
+      "semantic-release/github"
   ]
 }
