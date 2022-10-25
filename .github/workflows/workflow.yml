@@ -13,16 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      - name: Checkout code
-        run: echo ----------
-      - name: Checkout code
-        run: echo $${{ secrets.RTG_CI_TOKEN }}
-      - name: Checkout code
-        run: echo ----------
-        
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         with:
+          dry_run: true
           branch: "*"   
           extra_plugins: |
             semantic-release-helm3 
