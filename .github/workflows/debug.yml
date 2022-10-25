@@ -1,0 +1,17 @@
+name: Deliver release
+on: [push]
+
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Checkout code
+        run: echo ----------
+      - name: Checkout code
+        run: echo $${{ secrets.RTG_CI_TOKEN }}
+      - name: Checkout code
+        run: echo ----------
