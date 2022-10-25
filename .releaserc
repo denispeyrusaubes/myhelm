@@ -1,18 +1,18 @@
 {
-  "plugins": [
+    "branches": ["*"],
+    "debug": "true",
+    "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/github",
+    "@semantic-release/changelog",
     [
-        "@brpaz/semantic-release-helm",
+        "semantic-release-helm3",
         {
-          "chartPath": ".",
-          "chartRepository": {
-            "branch": "gh-pages",
-            "url": "https://brpaz.github.io/semantic-release-helm-demo",
-            "repository": "brpaz/semantic-release-helm-demo"
-          }
+          "chartPath": "./charts/domainnc",
+          "isChartMuseum": true,
+          "registry": "https://helm.opt.nc"
         }
-      ]
+      ],
+      "@semantic-release/github"
   ]
 }
